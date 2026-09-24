@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Taha &amp; Yasmine — 17 Octobre 2026</title>
+<meta name="description" content="Invitation au mariage de Taha & Yasmine — Samedi 17 Octobre 2026, Salle des fêtes l'Alliance, Constantine.">
+<meta name="theme-color" content="#FBF8F3">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Marcellus&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%F0%9F%A4%8D%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<!-- ====== decorative botanical layers (drawn by script.js) ====== -->
+<svg class="garland garland--top" viewBox="0 0 1000 360" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+  <g class="wash">
+    <ellipse cx="140" cy="40" rx="190" ry="120" fill="#cfd9b8"/>
+    <ellipse cx="880" cy="30" rx="210" ry="130" fill="#dcc9de"/>
+    <ellipse cx="520" cy="-20" rx="240" ry="110" fill="#e6cdd6"/>
+  </g>
+  <g id="vines-top"></g>
+</svg>
+
+<svg class="garland garland--bottom" viewBox="0 0 1000 340" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <g class="wash">
+    <ellipse cx="180" cy="320" rx="220" ry="120" fill="#d7c7e0"/>
+    <ellipse cx="820" cy="330" rx="230" ry="130" fill="#e8c9d4"/>
+    <ellipse cx="500" cy="352" rx="260" ry="110" fill="#cfd9b8"/>
+  </g>
+  <g id="vines-bottom"></g>
+</svg>
+
+<div class="flutter" aria-hidden="true" id="flutter"></div>
+
+<main class="sheet">
+
+  <!-- ====== 1. HERO ====== -->
+  <header class="hero" id="hero">
+    <p class="eyebrow reveal" data-d="1">Save the date</p>
+
+    <h1 class="names reveal" data-d="2">
+      <span class="name" id="groom">Taha</span>
+      <span class="heart" aria-hidden="true">
+        <svg viewBox="0 0 48 44"><path d="M24 40C10 31 2 23 2 14.5 2 7.6 7.4 2.5 13.9 2.5 18.2 2.5 21.8 4.8 24 8.4c2.2-3.6 5.8-5.9 10.1-5.9C40.6 2.5 46 7.6 46 14.5 46 23 38 31 24 40Z"/></svg>
+      </span>
+      <span class="name" id="bride">Yasmine</span>
+    </h1>
+
+    <div class="rule reveal" data-d="3"><i></i><span>&#10022;</span><i></i></div>
+
+    <p class="hero-date reveal" data-d="4" id="heroDate">17 Octobre 2026</p>
+    <p class="hero-sub reveal" data-d="5" id="heroSub">Nous vous invitons à célébrer notre mariage</p>
+
+    <a class="scroll-cue reveal" data-d="6" href="#invitation" aria-label="Découvrir l'invitation">
+      <span></span>
+    </a>
+  </header>
+
+  <!-- ====== 2. INVITATION MESSAGE ====== -->
+  <section class="section invitation" id="invitation">
+    <p class="kicker reveal">L'invitation</p>
+    <p class="lede reveal">
+      La famille <em id="familyName">Bouchmal</em> serait honorée de votre présence
+      à l'occasion du mariage de
+    </p>
+    <p class="lede-names reveal" id="ledeNames">Taha &amp; Yasmine</p>
+    <p class="lede-note reveal" id="ledeNote">
+      Votre présence à nos côtés rendra ce jour plus lumineux encore.
+      C'est avec le cœur plein de joie que nous vous accueillerons.
+    </p>
+  </section>
+
+  <div class="sprig-divider" aria-hidden="true"><svg viewBox="0 0 240 40" id="divider1"></svg></div>
+
+  <!-- ====== 3. EVENT DETAILS ====== -->
+  <section class="section details" id="details">
+    <p class="kicker reveal">Le grand jour</p>
+
+    <div class="detail-card reveal">
+      <div class="dc-row">
+        <div class="dc-cell">
+          <span class="dc-label" id="dayName">Samedi</span>
+        </div>
+        <div class="dc-cell dc-cell--main">
+          <span class="dc-month" id="monthName">Octobre</span>
+          <span class="dc-day" id="dayNum">17</span>
+          <span class="dc-year" id="yearNum">2026</span>
+        </div>
+        <div class="dc-cell">
+          <span class="dc-label" id="timeLabel">11H00</span>
+        </div>
+      </div>
+      <div class="dc-venue">
+        <p class="dc-venue-name" id="venue">Salle des fêtes <em>l'Alliance</em></p>
+        <p class="dc-venue-city" id="city">Constantine, Algérie</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 4. ACTIONS ====== -->
+  <section class="section actions" id="actions">
+    <a class="btn btn--map reveal" id="btnMap" href="#" target="_blank" rel="noopener">
+      <span class="btn-ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 22s7-6.1 7-12A7 7 0 0 0 5 10c0 5.9 7 12 7 12Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+      </span>
+      <span class="btn-txt">Voir la localisation</span>
+    </a>
+
+  </section>
+
+  <div class="sprig-divider" aria-hidden="true"><svg viewBox="0 0 240 40" id="divider2"></svg></div>
+
+  <!-- ====== 5. COUNTDOWN ====== -->
+  <section class="section countdown" id="countdown">
+    <p class="kicker reveal">Plus que</p>
+    <div class="cd-grid reveal" id="cdGrid" role="timer" aria-live="off">
+      <div class="cd-unit"><span class="cd-num" id="cdD">000</span><span class="cd-lab">Jours</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cdH">00</span><span class="cd-lab">Heures</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cdM">00</span><span class="cd-lab">Minutes</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cdS">00</span><span class="cd-lab">Secondes</span></div>
+    </div>
+  </section>
+
+  <div class="sprig-divider" aria-hidden="true"><svg viewBox="0 0 240 40" id="divider3"></svg></div>
+
+  <!-- ====== 6. CLOSING ====== -->
+  <section class="section closing" id="closing">
+    <p class="closing-text reveal" id="closingText">
+      Nous avons hâte de partager ce merveilleux moment avec vous
+    </p>
+    <p class="closing-heart reveal" aria-hidden="true">&#9825;</p>
+    <p class="closing-sign reveal" id="closingSign">Taha &amp; Yasmine</p>
+  </section>
+
+  <footer class="foot">
+    <p>Made with <span aria-label="amour">&#9825;</span> by <strong>Page Joyful</strong></p>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
