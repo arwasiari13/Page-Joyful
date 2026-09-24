@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page Joyful</title>
+<meta name="description" content="Page Joyful — invitations de mariage numériques.">
+<meta name="theme-color" content="#FBF8F3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Marcellus&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%F0%9F%A4%8D%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --ivory:#FBF8F3; --ivory-warm:#F6F0E7; --line:#EFE6DA;
+    --ink:#2B2724; --ink-soft:#6A6058; --ink-faint:#9A9088;
+    --sage:#7D8F5E; --blush:#E3A7B6;
+    --gold:#C6A75E; --gold-deep:#A2823C; --gold-pale:#E6D6AE;
+    --script:"Pinyon Script",cursive;
+    --serif:"Cormorant Garamond",Georgia,serif;
+    --caps:"Marcellus",Georgia,serif;
+    --ease:cubic-bezier(.22,.68,.32,1);
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  body{
+    margin:0; min-height:100svh;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:clamp(28px,7vw,64px) clamp(22px,6vw,56px);
+    font-family:var(--serif); color:var(--ink); text-align:center;
+    background:
+      radial-gradient(120% 55% at 50% 0%,#FFFDF9 0%,transparent 60%),
+      radial-gradient(100% 50% at 50% 100%,#FDF7F4 0%,transparent 62%),
+      linear-gradient(180deg,var(--ivory) 0%,var(--ivory-warm) 55%,var(--ivory) 100%);
+  }
+  .grain{
+    position:fixed; inset:0; z-index:9; pointer-events:none; opacity:.5; mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");
+  }
+  main{ position:relative; z-index:2; width:min(560px,100%); }
+
+  .brand{
+    margin:0; font-family:var(--script); font-weight:400;
+    font-size:clamp(46px,13vw,76px); line-height:1.05;
+  }
+  .tagline{
+    margin:clamp(12px,3vw,18px) 0 0; font-family:var(--caps);
+    font-size:clamp(9px,2.5vw,11px); letter-spacing:.42em; text-transform:uppercase;
+    color:var(--gold-deep);
+  }
+  .rule{
+    display:flex; align-items:center; justify-content:center; gap:12px;
+    width:min(260px,70%); margin:clamp(26px,6vw,36px) auto clamp(30px,7vw,44px);
+  }
+  .rule i{ flex:1; height:1px; background:linear-gradient(90deg,transparent,var(--gold-pale),var(--gold)); }
+  .rule i:last-child{ background:linear-gradient(90deg,var(--gold),var(--gold-pale),transparent); }
+  .rule span{ color:var(--gold); font-size:11px; line-height:1; }
+
+  .card{
+    position:relative;
+    padding:clamp(30px,7vw,44px) clamp(20px,5vw,36px);
+    background:linear-gradient(180deg,rgba(255,253,250,.9),rgba(253,248,242,.72));
+    border:1px solid var(--line);
+    box-shadow:0 24px 54px -36px rgba(93,76,58,.55);
+  }
+  .card::before,.card::after{
+    content:""; position:absolute; width:16px; height:16px; border:1px solid var(--gold-pale);
+  }
+  .card::before{ top:8px; left:8px; border-right:0; border-bottom:0; }
+  .card::after{ bottom:8px; right:8px; border-left:0; border-top:0; }
+
+  .card h2{
+    margin:0; font-family:var(--script); font-weight:400;
+    font-size:clamp(34px,10vw,50px); line-height:1.2;
+  }
+  .card h2 .amp{
+    font-family:var(--serif); font-style:italic; font-size:.44em;
+    color:var(--gold-deep); vertical-align:.2em; padding-inline:.14em;
+  }
+  .card .when{
+    margin:clamp(12px,3vw,16px) 0 0; font-family:var(--caps);
+    font-size:clamp(10px,2.8vw,12px); letter-spacing:.3em; text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .card .where{
+    margin:8px 0 0; font-size:clamp(15px,3.9vw,17px); font-style:italic;
+    font-weight:300; color:var(--ink-faint);
+  }
+
+  .btn{
+    position:relative; overflow:hidden;
+    display:flex; align-items:center; justify-content:center; gap:12px;
+    margin-top:clamp(24px,6vw,32px); padding:18px 22px;
+    text-decoration:none; color:var(--ink);
+    border:1px solid var(--gold-pale);
+    background:linear-gradient(180deg,rgba(255,253,250,.94),rgba(250,244,236,.82));
+    box-shadow:0 16px 34px -26px rgba(93,76,58,.7);
+    transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s var(--ease);
+  }
+  .btn::after{
+    content:""; position:absolute; inset:0; translate:-120% 0;
+    background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.75) 50%,transparent 70%);
+    transition:translate 1.05s var(--ease);
+  }
+  .btn:hover,.btn:focus-visible{
+    transform:translateY(-2px); border-color:var(--gold);
+    box-shadow:0 22px 40px -24px rgba(93,76,58,.55);
+  }
+  .btn:hover::after,.btn:focus-visible::after{ translate:120% 0; }
+  .btn span{
+    font-family:var(--caps); font-size:clamp(11.5px,3.2vw,13px);
+    letter-spacing:.22em; text-transform:uppercase;
+  }
+  .btn svg{ width:19px; height:auto; flex:none; fill:none; stroke:var(--blush); stroke-width:1.5;
+    stroke-linecap:round; stroke-linejoin:round; }
+
+  footer{
+    margin-top:clamp(34px,8vw,54px);
+    font-size:12.5px; letter-spacing:.06em; color:var(--ink-faint);
+  }
+  footer b{ font-family:var(--caps); font-weight:400; letter-spacing:.14em; color:var(--ink-soft); }
+  footer i{ color:var(--blush); font-style:normal; }
+
+  main > *{ opacity:0; animation:rise 1s var(--ease) forwards; }
+  main > *:nth-child(1){ animation-delay:.05s }
+  main > *:nth-child(2){ animation-delay:.16s }
+  main > *:nth-child(3){ animation-delay:.27s }
+  main > *:nth-child(4){ animation-delay:.38s }
+  main > *:nth-child(5){ animation-delay:.52s }
+  @keyframes rise{ from{ opacity:0; transform:translateY(16px) } to{ opacity:1; transform:none } }
+
+  @media (prefers-reduced-motion:reduce){
+    main > *{ opacity:1; animation:none; }
+    *{ transition-duration:.01ms !important; }
+  }
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<main>
+  <h1 class="brand">Page Joyful</h1>
+  <p class="tagline">Invitations de mariage</p>
+
+  <div class="rule" aria-hidden="true"><i></i><span>&#10022;</span><i></i></div>
+
+  <article class="card">
+    <h2>Taha <span class="amp">&amp;</span> Yasmine</h2>
+    <p class="when">Samedi 17 octobre 2026</p>
+    <p class="where">Salle des fêtes l'Alliance, Constantine</p>
+
+    <a class="btn" href="Taha%20et%20Yassmine/index.html">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="m3 7 9 6 9-6"/>
+      </svg>
+      <span>Ouvrir l'invitation</span>
+    </a>
+  </article>
+
+  <footer>Made with <i>&#9825;</i> by <b>Page Joyful</b></footer>
+</main>
+</body>
+</html>

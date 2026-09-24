@@ -2,6 +2,9 @@
 
 Invitations de mariage numériques.
 
+La page d'accueil (`index.html`, à la racine) sert de sommaire : elle présente
+chaque invitation avec un bouton qui l'ouvre.
+
 ## Taha et Yassmine
 
 Invitation pour le mariage de **Taha & Yasmine** — samedi 17 octobre 2026, 11h00,
